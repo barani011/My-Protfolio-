@@ -1,0 +1,142 @@
+/* --- FIXED SIDEBAR (HORIZONTAL TEXT + RED BORDER) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100vh;
+    background-color: #020612;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-radius: 15px;
+    
+    /* RED BORDER */
+    border-right: 2px solid #F41414; 
+    z-index: 1000;
+}
+
+.top-dot {
+    width: 45px;
+    height: 45px;
+    background: #D91818;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(217, 24, 24, 0.3);
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-menu a {
+    color: #B0B0B0; /* Grey inactive text */
+    text-decoration: none;
+    font-family: 'Blinker', sans-serif;
+    font-size: 15px; /* Smaller font for horizontal fit */
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-align: left;
+
+    /* HORIZONTAL TEXT (No Rotation) */
+    writing-mode: horizontal-tb; 
+    transform: none;
+}
+
+/* Active State (Turns Red on Scroll) */
+.nav-menu a.active {
+    color: #F41414;
+    font-weight: 700;
+    transform: scale(1.1);
+}
+
+.share-icon {
+    width: 45px;
+    height: 45px;
+    background: #F41414;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.share-icon:hover {
+    transform: scale(1.1);
+}
+
+.share-icon i {
+    color: rgb(18, 17, 17);
+    font-size: 30px;
+}
+
+/* --- THE HIDDEN POPUP CONTAINER (RIGHT SIDE) --- */
+.share-popup {
+    position: absolute;
+    /* Position it to the right of the sidebar/button */
+    left: 70px; 
+    bottom: 5px; /* Aligns with the share button vertically */
+    
+    display: flex;
+    flex-direction: row; /* Horizontal list */
+    gap: 15px;
+    align-items: center;
+    
+    /* Animation States */
+    opacity: 0;
+    visibility: hidden;
+    /* Start slightly to the left (behind the button) */
+    transform: translateX(-20px); 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 999;
+    
+    /* Optional: Add a dark background pill behind icons for better visibility */
+    background: rgba(2, 6, 18, 0.9);
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- ACTIVE STATE (Slide Right) --- */
+.share-popup.active {
+    opacity: 1;
+    visibility: visible;
+    /* Slide out to natural position */
+    transform: translateX(0); 
+}
+
+/* --- INDIVIDUAL SOCIAL BUTTONS --- */
+.s-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.s-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Brand Colors */
+.whatsapp { background-color: #25D366; }
+.linkedin { background-color: #0077B5; }
+.instagram { 
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
+}
+.telegram { background-color: #0088cc; }

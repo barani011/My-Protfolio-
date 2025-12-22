@@ -1,0 +1,83 @@
+/* --- FOOTER SECTION --- */
+.footer-section {
+    width: 100%;
+    background-color: #020612; /* Darker background for footer */
+    border-top: 3px solid #F41414; /* The Red Top Line */
+    padding: 60px 0 20px 0;
+    margin-left: 100px; /* Offset for Sidebar */
+    /* Ensure footer doesn't overflow horizontally */
+    width: calc(100% - 100px); 
+    box-sizing: border-box;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align top */
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Thin grey line before copyright */
+}
+
+/* Columns */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-col a {
+    color: #B0B0B0; /* Light Grey Text */
+    text-decoration: none;
+    font-family: 'Blinker', sans-serif;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #FFFFFF;
+}
+
+/* Center Column (Follow Us) */
+.center-col {
+    align-items: center;
+}
+
+.footer-title {
+    color: #FFFFFF;
+    font-family: 'Blinker', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #D9D9D9; /* Light grey circle background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #020612; /* Dark icon color */
+    font-size: 18px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    background-color: #FFFFFF;
+}

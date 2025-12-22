@@ -1,0 +1,74 @@
+
+/* --- SKILLS SECTION --- */
+.skills-section, .services-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    margin-left: 80px;
+    /* Removed margin-top hacks */
+}
+
+.container-content {
+    width: 100%;
+    margin-top: 0; /* Changed from -250px to 0 */
+}
+
+.skills-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.skill-category {
+    flex: 1;
+}
+
+.category-title {
+    font-family: var(--font-sub);
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.skill-card {
+    background-color: #081025; /* Dark card background */
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.icon-circle img {
+    width: 100%; /* Makes the logo occupy 60% of the circle size */
+    height: 100%;
+    object-fit: contain; /* Ensures the logo stays sharp and doesn't distort */
+    display: block;
+}
+
+/* Specific Colors for Icons */
+
+.icon-item span {
+    font-size: 14px;
+    color: var(--text-grey);
+}

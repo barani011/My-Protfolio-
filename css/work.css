@@ -1,0 +1,183 @@
+
+/* --- WORKS SECTION --- */
+.works-section {
+    padding: 50px 0;
+    width: 100%;
+    margin-left: 230px;
+}
+
+.container-content3 {
+    width: 100%;
+    margin-top: 0; /* Changed from -1120px to 0 */
+}
+
+.works-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section-title {
+    font-family: 'Braah One', sans-serif;
+    font-size: 48px;
+    color: #FFFFFF;
+}
+
+/* --- FILTER BUTTONS --- */
+.filter-container {
+    display: flex;
+    gap: 10px;
+    margin-right: 300px;
+}
+
+.filter-pill {
+    background: transparent;
+    border: none;
+    color: #B0B0B0;
+    font-family: 'Blinker', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-pill:hover {
+    color: white;
+}
+
+.filter-pill.active {
+    background-color: #1C2336;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* --- SLIDER CONTAINER SETUP --- */
+.slider-container-relative {
+    position: relative; /* Essential for overlay positioning */
+    width: 100%;
+    overflow: hidden; /* Hides content that scrolls out */
+    margin-left: -200px;
+}
+
+/* The Scrollable Area */
+.slider-wrapper {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto; /* Enables scroll */
+    padding-bottom: 20px;
+    padding-right: 150px; /* Space at end so last card isn't covered by shadow */
+    scroll-behavior: smooth;
+    margin-left: 180px;
+    
+    /* Hide scrollbars */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+.slider-wrapper::-webkit-scrollbar { 
+    display: none;
+}
+
+/* --- THE EXACT SHADOW DESIGN OVERLAY --- */
+.scroll-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 180px; /* Width of the shadow area */
+    
+    /* The Fade Gradient: Transparent -> Dark Background Color */
+    background: linear-gradient(to right, transparent 0%, #050D22 60%, #050D22 100%);
+    
+    display: flex;
+    align-items: center; /* Centers arrow vertically */
+    justify-content: center; /* Centers arrow horizontally in the shadow */
+    z-index: 10;
+    pointer-events: none; /* Let clicks pass through the transparent part */
+}
+
+/* --- NAVIGATION ARROW --- */
+.nav-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(22, 28, 45, 0.9); /* Dark background for button */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: background 0.3s;
+    
+    pointer-events: auto; /* Re-enable clicks on the button itself */
+}
+
+.nav-arrow:hover {
+    background: #1C2336;
+    transform: scale(1.1);
+}
+
+/* --- WORK CARD --- */
+.work-card {
+    min-width: 320px;
+    height: 280px;
+    background-color: #0B1229;
+    border-radius: 25px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-image {
+    height: 70%;
+    width: 100%;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.white-bg { background-color: #FFFFFF; display: flex; align-items: center; justify-content: center; }
+.green-wave-bg { background: linear-gradient(135deg, #1e3c72, #2a5298); /* Fallback or image */ }
+
+.card-info {
+    height: 30%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card-info h3 {
+    font-family: 'Blinker', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .works-header { flex-direction: column; align-items: flex-start; }
+    .filter-container { flex-wrap: wrap; }
+    .work-card { min-width: 280px; }
+    .scroll-overlay { width: 100px; } /* Smaller shadow on mobile */
+}
