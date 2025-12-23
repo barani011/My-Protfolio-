@@ -66,3 +66,40 @@
         gap: 20px;
     }
 }
+
+/* From Uiverse.io by ArturCodeCraft */ 
+/* <reset-style> ============================ */
+a {
+  text-decoration: none;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+/* <main-style> ============================ */
+.menu__link {
+  color: #0e85f5;
+  line-height: 2;
+  position: relative;
+  padding-right: 4px;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.menu__link::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px #0099ff;
+  border-right: solid 2px #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform .4s;
+}
+
+.menu__link:hover::before {
+  transform: translateX(4px) translateY(-50%) rotate(45deg);
+}
