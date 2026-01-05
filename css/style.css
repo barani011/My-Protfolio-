@@ -6,7 +6,7 @@
 }
 
 :root {
-    --bg-color: #050D22;
+    --bg-color: #000000;
     --sidebar-bg: #ce2929;
     --accent-color: #F41414;
     --text-white: #FFFFFF;
@@ -311,7 +311,7 @@ section {
 }
 
 .tools-card {
-    background-color: #081025;
+    background-color: #040914;
     border-radius: 15px;
     padding: 30px;
     display: flex;

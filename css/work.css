@@ -91,7 +91,7 @@
     width: 180px; /* Width of the shadow area */
     
     /* The Fade Gradient: Transparent -> Dark Background Color */
-    background: linear-gradient(to right, transparent 0%, #050D22 60%, #050D22 100%);
+    background: linear-gradient(to right, transparent 0%, #000000 60%, #000000 100%);
     
     display: flex;
     align-items: center; /* Centers arrow vertically */
@@ -128,7 +128,7 @@
 .work-card {
     min-width: 320px;
     height: 280px;
-    background-color: #0B1229;
+    background-color: #040914;
     border-radius: 25px;
     overflow: hidden;
     flex-shrink: 0;
