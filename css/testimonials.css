@@ -106,7 +106,7 @@
     
     /* Truncate text */
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 4; /* Show only 4 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
