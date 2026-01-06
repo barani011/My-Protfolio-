@@ -126,6 +126,7 @@
 
 /* --- WORK CARD --- */
 .work-card {
+    /* Keep all your existing settings */
     min-width: 320px;
     height: 280px;
     background-color: #040914;
@@ -136,6 +137,10 @@
     flex-direction: column;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: transform 0.3s ease, opacity 0.3s ease;
+
+    /* ADD THESE 2 LINES: */
+    text-decoration: none; /* Removes underline from text */
+    cursor: pointer;       /* Shows hand icon on hover */
 }
 
 .work-card:hover {
