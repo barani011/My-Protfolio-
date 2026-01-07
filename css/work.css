@@ -1,12 +1,11 @@
-
 /* --- WORKS SECTION --- */
 .works-section {
     padding: 50px 0;
     width: 100%;
-    margin-left: 230px;
+    margin-left: 240px;
 }
 
-.container-content3 {
+.container-work {
     width: 100%;
     margin-top: 0; /* Changed from -1120px to 0 */
 }
