@@ -347,3 +347,27 @@ section {
     font-size: 12px;
     color: var(--text-grey);
 }
+
+/* --- BUTTONS CONTAINER --- */
+.hero-buttons {
+    display: flex;
+    align-items: center; /* Aligns them vertically center */
+    gap: 25px; /* Adds space between Download button and GitHub icon */
+    margin-top: 30px;
+}
+
+/* --- GITHUB ICON BUTTON --- */
+.github-icon-btn {
+    font-size: 35px; /* Make the icon nice and big */
+    color: #FFFFFF;  /* Default color (White) */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth animation */
+    display: flex;
+    align-items: center;
+}
+
+/* HOVER EFFECT */
+.github-icon-btn:hover {
+    color: #F41414; /* Changes to your Red Accent Color */
+    transform: scale(1.1); /* Slightly zooms in */
+}
